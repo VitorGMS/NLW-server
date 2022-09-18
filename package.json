@@ -4,9 +4,12 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "prisma migrate deploy && prisma db seed && tsc",
     "dev": "tsnd --exit-child src/server.ts",
     "start": "node build/server.js"
+  },
+  "prisma": {
+    "seed": "tsnd src/database/seed.ts"
   },
   "keywords": [],
   "author": "",
