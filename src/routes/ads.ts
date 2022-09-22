@@ -1,4 +1,4 @@
-import express from "express";
+import express, { request, response } from "express";
 import HttpCodes from "../constants/HttpCodes";
 import database from "../database/db";
 import DateUtils from "../utils/dataUtils";
